@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday 🎉</title>
+  <link rel="icon" href="your-photo.jpg">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+      font-family: 'Comic Sans MS', cursive;
+      text-align: center;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-size: 3.2em;
+      margin-top: 50px;
+      color: #ff4081;
+    }
+
+    .photo {
+      margin: 20px auto 20px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 0 -30px; /* fine-tune based on face position */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    p {
+      font-size: 1.3em;
+      max-width: 700px;
+      margin: 20px auto;
+    }
+
+    .cake {
+      font-size: 100px;
+      animation: bounce 1s infinite alternate;
+    }
+
+    @keyframes bounce {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-20px); }
+    }
+
+    .button {
+      background-color: #ff4081;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 30px;
+    }
+
+    .button:hover {
+      background-color: #e91e63;
+    }
+
+    .message {
+      display: none;
+      margin-top: 30px;
+      font-size: 1.5em;
+      color: #4a148c;
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Music -->
+  <audio autoplay loop>
+    <source src="happy-birthday.mp3" type="audio/mpeg">
+    Your browser does not support the audio tag.
+  </audio>
+
+  <h1>🎉 Happy Birthday Mamta 🎉</h1>
+
+  <!-- Friend's Photo -->
+  <img src="mamta.jpeg" alt="Birthday Girl" class="photo">
+
+  <div class="cake">🎂</div>
+  
+  <p>
+    Wishing you a day filled with love, joy, and laughter! You are a true gift to everyone around you. May your year be as beautiful as your smile. 💖
+  </p>
+
+  <button class="button" onclick="showMessage()">Click for a surprise 🎁</button>
+
+  <div class="message" id="secretMsg">
+    ✨ Dear Mamta, you are not just my best friend, you're my favorite human! I'm so lucky to have you in my life. Happy Birthday, and keep glowing like always! ✨
+  </div>
+
+  <script>
+    function showMessage() {
+      document.getElementById('secretMsg').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
